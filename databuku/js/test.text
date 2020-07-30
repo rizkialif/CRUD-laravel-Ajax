@@ -1,0 +1,11 @@
+var serverPath = "http://localhost/lesson8_9-Lumen/public/";
+function getProdukList()
+{
+    return $.ajax({
+        type: "GET",
+        url: serverPath + "produk",
+        error: function (xhr) {
+            console.log(xhr.responseText);
+        }
+    });
+}
